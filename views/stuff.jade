@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Stuff
+  each s in stuff
+    ul
+        li Name: #{s.name}
+        li Childern: 
+            ul
+                each k in s.kids
+                    li #{k}
+        li Age: #{s.age}
+        li 
+            a(href="/delete/#{s._id}") Delete
